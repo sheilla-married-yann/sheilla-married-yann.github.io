@@ -4,30 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sheilla & Yann</title>
-  <meta http-equiv="refresh" content="5;url=https://withjoy.com/sheilla-and-yann-sep-26/rsvp?utm_medium=web&utm_source=joy&utm_campaign=share_website_dialog">
+  <meta http-equiv="refresh" content="8;url=https://withjoy.com/sheilla-and-yann-sep-26/rsvp?utm_medium=web&utm_source=joy&utm_campaign=share_website_dialog">
+  
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
     html, body {
       margin: 0;
       height: 100%;
       background: #000;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      font-family: 'Inter', sans-serif;
+      color: rgba(255, 255, 255, 0.6);
     }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
     img {
-      max-width: 100%;
-      max-height: 100%;
+      max-width: 90vw;
+      max-height: 80vh;
       object-fit: contain;
       display: block;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .redirect-note {
+      font-size: 0.85rem;
+      letter-spacing: 0.05rem;
+      animation: fadeIn 2s ease-in forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <img src="assets/images/invitation.jpg" alt="Wedding invitation" />
+
+  <div class="container">
+    <img src="assets/images/invitation.jpg" alt="Wedding invitation" />
+    <div class="redirect-note">
+      Directing you to the RSVP in a moment...
+    </div>
+  </div>
+
   <script>
     setTimeout(function() {
       window.location.href = 'https://withjoy.com/sheilla-and-yann-sep-26/rsvp?utm_medium=web&utm_source=joy&utm_campaign=share_website_dialog';
-    }, 10000);
+    }, 8000); // Matches the meta refresh
   </script>
 </body>
 </html>
